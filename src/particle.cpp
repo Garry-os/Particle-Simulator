@@ -46,5 +46,6 @@ void Particle::update(float deltaTime) {
 }
 
 void Particle::draw(const Renderer& renderer) {
-    renderer.draw_rect(x, y, particle_size, particle_size, particles_colors[static_cast<int>(type)]);
+    // renderer.draw_rect(x, y, particle_size, particle_size, particles_colors[static_cast<int>(type)]);
+    renderer.draw_circle(x, y, particle_size, particles_colors[static_cast<size_t>(type)]);
 }

@@ -45,7 +45,7 @@ void ParticlesManager::update(const Renderer& renderer, float deltaTime, float s
                     force = rules[static_cast<size_t>(particle.type), static_cast<size_t>(particle1.type)];
 
                     float scale = (distance - r_repel) / (r_max - r_repel);
-                    float curve = -1.0f - std::abs(2.0f * scale - 1.0f);
+                    float curve = 1.0f - std::abs(2.0f * scale - 1.0f);
                     force = curve * force;
                 }
                 float dirX = dx / distance;

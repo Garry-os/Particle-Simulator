@@ -20,6 +20,9 @@ public:
     inline void draw_rect(float x, float y, float width, float height, Color color) const {
         DrawRectangle((int)x, (int)y, (int)width, (int)height, color);
     }
+    inline void draw_circle(float cx, float cy, float radius, Color color) const {
+        DrawCircle((int)cx, (int)cy, radius, color);
+    }
 
 private:
     int width, height;
